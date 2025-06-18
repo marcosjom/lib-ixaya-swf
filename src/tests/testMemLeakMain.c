@@ -8,11 +8,29 @@
 
 #include <stdio.h>
 #include <stdlib.h>		//malloc, free
-#include "ixaya-swf.h"
+#include "testMemMap.h"
 //Ixaya-swf depends on a method to uncompress ZLIB data.
 //For this demo you can download EasyZLIB ("easyzlib.h" and "easyzlib.c")
-//and copy them into "ixaya-swf/src/c/" folder. http://www.firstobject.com/easy-zlib-c++-xml-compression.htm
-#include "easyzlib.h" //Read the note above.
+//and copy them into "ixaya-swf/src/ext/" folder. http://www.firstobject.com/easy-zlib-c++-xml-compression.htm
+#include "../ext/easyzlib.h" //Read the note above.
+
+// Custom memory allocation for this demo,
+// for detecting memory-leaks using a STNB_MemMap.
+STNB_MemMap memmap;
+#define IXA_MALLOC(POINTER_DEST, POINTER_TYPE, SIZE_BYTES, STR_HINT) \
+	{ \
+		POINTER_DEST = (POINTER_TYPE*)malloc(SIZE_BYTES); \
+		nbMemmapRegister(&memmap, POINTER_DEST, SIZE_BYTES, STR_HINT); \
+	}
+#define IXA_FREE(POINTER)	\
+	{ \
+		free(POINTER); \
+		nbMemmapUnregister(&memmap, POINTER); \
+	}
+#include "ixaya-swf.h"
+#include "../c/ixaya-swf.c"
+//In this demo, we include then "source" file to implement customized memory allocation.
+//The "ixaya-swf.c" file is not part of the project tree.
 
 IxaBOOL uncompressSwfZlib(IxaUI8* ptrDest, const IxaUI32 destLen, const IxaUI8* ptrSrc, const IxaUI32 srcLen);
 
@@ -22,6 +40,7 @@ int main(int argc, const char * argv[]) {
 	const char* explicitSwfPath = NULL;
 	const char* swfPath = NULL;
 	int i;
+	nbMemmapInit(&memmap);
 	//Read prameter "-swf"
 	for(i=0; i<argc; i++){
 		if(argv[i][0]=='-')
@@ -35,8 +54,8 @@ int main(int argc, const char * argv[]) {
 			}
 	}
 	if(explicitSwfPath==NULL){
-		swfPath = defaultSwfPath;
 		printf("IXAYA demo: you can specify a SWF file with params '-swf <pathToSwf>'\n");
+		swfPath = defaultSwfPath;
 	} else {
 		swfPath = explicitSwfPath;
 	}
@@ -55,6 +74,16 @@ int main(int argc, const char * argv[]) {
 		}
 		ixaSwfFileFinalize(&swfFile);
 	}
+	//Analize memory state
+	if(memmap.currCountAllocationsActive==0){
+		printf("Ixaya: no memory leaking detected :)\n");
+	} else {
+		printf("--------------\n");
+		printf("---- WARNING, IXAYA MEMORY-LEAK! :(\n");
+		printf("--------------\n");
+	}
+	nbMemmapPrintActive(&memmap);
+	nbMemmapFinalize(&memmap);
 	//
 	{
 		char c;

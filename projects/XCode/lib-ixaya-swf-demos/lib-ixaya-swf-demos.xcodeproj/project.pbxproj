@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C82A73418C29FA700DB9D37 /* easyzlib.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE14FE18BC0D21009C2FC4 /* easyzlib.h */; };
-		2C82A73518C29FA700DB9D37 /* easyzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE14FD18BC0D21009C2FC4 /* easyzlib.c */; };
+		2C3649142E02D1EC002304D1 /* easyzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C3649132E02D1EC002304D1 /* easyzlib.c */; };
 		2C82A73618C29FA700DB9D37 /* ixaya-swf.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE150118BC0D35009C2FC4 /* ixaya-swf.h */; };
 		2C82A73718C29FA700DB9D37 /* testMemLeakMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C82A71518C29F1C00DB9D37 /* testMemLeakMain.c */; };
 		2C82A73818C29FA700DB9D37 /* testMemMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C82A71618C29F1C00DB9D37 /* testMemMap.c */; };
 		2C82A73918C29FA700DB9D37 /* testMemMap.h in Sources */ = {isa = PBXBuildFile; fileRef = 2C82A71718C29F1C00DB9D37 /* testMemMap.h */; };
-		2C82A73A18C29FB400DB9D37 /* easyzlib.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE14FE18BC0D21009C2FC4 /* easyzlib.h */; };
-		2C82A73B18C29FB400DB9D37 /* easyzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE14FD18BC0D21009C2FC4 /* easyzlib.c */; };
 		2C82A73C18C29FB400DB9D37 /* ixaya-swf.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE150018BC0D35009C2FC4 /* ixaya-swf.c */; };
 		2C82A73D18C29FB400DB9D37 /* ixaya-swf.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE150118BC0D35009C2FC4 /* ixaya-swf.h */; };
 		2C82A73E18C29FB400DB9D37 /* demoReadSwfMain.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C82A71318C29F0600DB9D37 /* demoReadSwfMain.c */; };
@@ -42,16 +39,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C82A71318C29F0600DB9D37 /* demoReadSwfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = demoReadSwfMain.c; path = ../../../src/c/demos/demoReadSwfMain.c; sourceTree = SOURCE_ROOT; };
-		2C82A71518C29F1C00DB9D37 /* testMemLeakMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testMemLeakMain.c; path = ../../../src/c/tests/testMemLeakMain.c; sourceTree = SOURCE_ROOT; };
-		2C82A71618C29F1C00DB9D37 /* testMemMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testMemMap.c; path = ../../../src/c/tests/testMemMap.c; sourceTree = SOURCE_ROOT; };
-		2C82A71718C29F1C00DB9D37 /* testMemMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testMemMap.h; path = ../../../src/c/tests/testMemMap.h; sourceTree = SOURCE_ROOT; };
+		2C3649122E02D1EC002304D1 /* easyzlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = easyzlib.h; path = ../../../src/ext/easyzlib.h; sourceTree = SOURCE_ROOT; };
+		2C3649132E02D1EC002304D1 /* easyzlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = easyzlib.c; path = ../../../src/ext/easyzlib.c; sourceTree = SOURCE_ROOT; };
+		2C82A71318C29F0600DB9D37 /* demoReadSwfMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = demoReadSwfMain.c; path = ../../../src/demos/demoReadSwfMain.c; sourceTree = SOURCE_ROOT; };
+		2C82A71518C29F1C00DB9D37 /* testMemLeakMain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testMemLeakMain.c; path = ../../../src/tests/testMemLeakMain.c; sourceTree = SOURCE_ROOT; };
+		2C82A71618C29F1C00DB9D37 /* testMemMap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testMemMap.c; path = ../../../src/tests/testMemMap.c; sourceTree = SOURCE_ROOT; };
+		2C82A71718C29F1C00DB9D37 /* testMemMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testMemMap.h; path = ../../../src/tests/testMemMap.h; sourceTree = SOURCE_ROOT; };
 		2C82A71E18C29F6100DB9D37 /* ixaTestMem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ixaTestMem; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C82A72B18C29F7800DB9D37 /* ixaReadSwf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ixaReadSwf; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CAE14FD18BC0D21009C2FC4 /* easyzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = easyzlib.c; path = ../../../src/c/easyzlib.c; sourceTree = SOURCE_ROOT; };
-		2CAE14FE18BC0D21009C2FC4 /* easyzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = easyzlib.h; path = ../../../src/c/easyzlib.h; sourceTree = SOURCE_ROOT; };
 		2CAE150018BC0D35009C2FC4 /* ixaya-swf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ixaya-swf.c"; path = "../../../src/c/ixaya-swf.c"; sourceTree = SOURCE_ROOT; };
-		2CAE150118BC0D35009C2FC4 /* ixaya-swf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ixaya-swf.h"; path = "../../../src/c/ixaya-swf.h"; sourceTree = SOURCE_ROOT; };
+		2CAE150118BC0D35009C2FC4 /* ixaya-swf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ixaya-swf.h"; path = "../../../include/ixaya-swf.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +78,20 @@
 			name = "lib-ixaya-swf";
 			sourceTree = "<group>";
 		};
-		2C146E2C18BECBA1003A2C84 /* tools */ = {
+		2C3649152E02F15B002304D1 /* ext */ = {
 			isa = PBXGroup;
 			children = (
-				2CAE14FE18BC0D21009C2FC4 /* easyzlib.h */,
-				2CAE14FD18BC0D21009C2FC4 /* easyzlib.c */,
 			);
-			name = tools;
+			path = ext;
+			sourceTree = "<group>";
+		};
+		2C3649162E02F161002304D1 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				2C3649122E02D1EC002304D1 /* easyzlib.h */,
+				2C3649132E02D1EC002304D1 /* easyzlib.c */,
+			);
+			path = ext;
 			sourceTree = "<group>";
 		};
 		2C82A71118C29EE700DB9D37 /* tests */ = {
@@ -111,6 +115,7 @@
 		2CAE14E818BC0CC8009C2FC4 = {
 			isa = PBXGroup;
 			children = (
+				2C3649152E02F15B002304D1 /* ext */,
 				2CAE14F318BC0CC8009C2FC4 /* lib-ixaya-swf-demos */,
 				2CAE14F218BC0CC8009C2FC4 /* Products */,
 			);
@@ -128,13 +133,13 @@
 		2CAE14F318BC0CC8009C2FC4 /* lib-ixaya-swf-demos */ = {
 			isa = PBXGroup;
 			children = (
-				2C146E2C18BECBA1003A2C84 /* tools */,
 				2C146E2B18BECB8C003A2C84 /* lib-ixaya-swf */,
 				2C82A71218C29EED00DB9D37 /* demos */,
 				2C82A71118C29EE700DB9D37 /* tests */,
+				2C3649162E02F161002304D1 /* ext */,
 			);
 			path = "lib-ixaya-swf-demos";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -187,6 +192,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 2CAE14E818BC0CC8009C2FC4;
@@ -205,8 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C82A73418C29FA700DB9D37 /* easyzlib.h in Sources */,
-				2C82A73518C29FA700DB9D37 /* easyzlib.c in Sources */,
+				2C3649142E02D1EC002304D1 /* easyzlib.c in Sources */,
 				2C82A73618C29FA700DB9D37 /* ixaya-swf.h in Sources */,
 				2C82A73718C29FA700DB9D37 /* testMemLeakMain.c in Sources */,
 				2C82A73818C29FA700DB9D37 /* testMemMap.c in Sources */,
@@ -218,8 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C82A73A18C29FB400DB9D37 /* easyzlib.h in Sources */,
-				2C82A73B18C29FB400DB9D37 /* easyzlib.c in Sources */,
 				2C82A73C18C29FB400DB9D37 /* ixaya-swf.c in Sources */,
 				2C82A73D18C29FB400DB9D37 /* ixaya-swf.h in Sources */,
 				2C82A73E18C29FB400DB9D37 /* demoReadSwfMain.c in Sources */,

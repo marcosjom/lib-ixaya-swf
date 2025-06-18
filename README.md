@@ -1,44 +1,38 @@
 
-#----------------------
+
 #ixaya-swf
-#----------------------
 
-Ixaya ("abrir los ojos" en Nahuatl) es una librería para la carga de archivos SWF de FLASH. Puede ser utilizada como base para el desarrollo de herramientas que consuman, modifiquen o produzcan archivos SWF.
+Ixaya ("opening your eyes" in Nahuatl) is a library for uploading FLASH SWF files. It can be used as a basis for the development of tools that consume, modify, or produce SWF files.
 
-#----------------------
-#Licencia
-#----------------------
+#Licence
 
-LGPLv2.1, ver archivo LICENSE
+LGPLv2.1, see LICENSE file
 
-#----------------------
-#Origen
-#----------------------
+#Origin
 
-Publicada el 01/mar/2014.
+Published on 01/Mar/2014.
 
-Esta librería fue inicialmente desarrollada por Marcos Ortega a partir del documento "SWF FILE FORMAT SPECIFICATION" publicado por Adobe en: http://www.adobe.com 
+This library was initially developed by Marcos Ortega from the document "SWF FILE FORMAT SPECIFICATION" published by Adobe in: http://www.adobe.com
 
-#----------------------
-#Utilidad
-#----------------------
 
-Esta librería fue desarrollada con el objetivo de extraer datos desde archivos SWF.
+#Use
 
-Ixaya-swf aun no extrae la totalidad de objetos dentro de un SWF. La versión actual extrae formas (gráficos vectoriales), recursos binarios (imagenes jpegs y otros), sonidos (mp3s y PCM), lossless (mapas de bits PNG) y movie clips.
 
-#----------------------
-#Características de código
-#----------------------
+This library was developed with the aim of extracting data from SWF files.
 
-Ixaya-swf fue concebida y desarrollada priorizando la facilidad para integrar en otros proyectos, caracterizada por:
+Ixaya-swf does not yet extract all objects within a SWF. The current version extracts shapes (vector graphics), binary assets (jpeg images and others), sounds (mp3s and PCM), lossless (PNG bitmaps), and movie clips.
 
-- consiste sólo de dos archivos ("ixaya-swf.h" e "ixaya-swf.c").
-- obligatoriamente depende de solo estos includes a "stdio.h" y "string.h".
-- opcionalmente depende de estos includes "stdlib.h" y "assert.h".
-- permite la gestión personalizada de memoria.
 
-Gracias a su estructura actual, Ixaya-swf puede ser integrada a la mayoría de proyectos de código nativo para:
+#Code Features
+
+Ixaya-swf was conceived and developed prioritising the ease of integration into other projects, characterised by:
+
+- It consists of only two files ("ixaya-swf.h" and "ixaya-swf.c").
+- It is mandatory that only these include "stdio.h" and "string.h".
+- Optionally depends on these includes "stdlib.h" and "assert.h".
+- Allows personalised memory management.
+
+Thanks to its current structure, Ixaya-swf can be integrated into most native code projects to:
 
 - Windows
 - Linux
@@ -48,15 +42,14 @@ Gracias a su estructura actual, Ixaya-swf puede ser integrada a la mayoría de p
 - Blackberry 10
 - etc..
 
-#----------------------
-#Dependencia para descomprimir ZLIB
-#----------------------
 
-Ixaya-swf depende de una función que realice la decompresion de contenido en formato ZLIB. El proyecto donde se vaya a integrara Ixaya-swf deberá proporcionar un callback para descomprimir ZLIB. Ver demos y las invocaciones al método "ixaSwfLoadFile".
+#ZLIB Dependency
 
-#----------------------
-#Código de ejemplo
-#----------------------
+
+Ixaya-swf depends on a function that performs content decompression in ZLIB format. The project where Ixaya-swf is to be integrated must provide a callback to decompress ZLIB. See demos and invocations to the "ixaSwfLoadFile" method.
+
+#Example Code
+
 
 ```c
 #include "ixaya-swf.h"

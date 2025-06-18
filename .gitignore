@@ -1,3 +1,8 @@
+
+*.DS_Store
+xcuserdata
+.vs
+
 projects/eclipseWorkspace/.metadata
 
 src/c/easyzlib.h
@@ -41,3 +46,4 @@ projects/VisualStudio/Debug
 projects/XCode/ixaya-swf.xcworkspace/xcshareddata
 
 projects/XCode/ixaya-swf/ixaya-swf.xcodeproj/xcshareddata
+*.xcuserstate
