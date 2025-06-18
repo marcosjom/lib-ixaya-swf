@@ -2,7 +2,7 @@
 
 #ixaya-swf
 
-Ixaya ("opening your eyes" in Nahuatl) is a library for uploading FLASH SWF files. It can be used as a basis for the development of tools that consume, modify, or produce SWF files.
+Ixaya ("opening your eyes" in Nahuatl) is a library for parsing/loading FLASH SWF files. It can be used as a basis for the development of tools that consume, modify, or produce SWF files.
 
 #Licence
 
