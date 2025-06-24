@@ -1,29 +1,27 @@
 
 
-#ixaya-swf
+# ixaya-swf
 
 Ixaya ("opening your eyes" in Nahuatl) is a library for parsing/loading FLASH SWF files. It can be used as a basis for the development of tools that consume, modify, or produce SWF files.
 
-#Licence
+# Licence
 
-LGPLv2.1, see LICENSE file
+MIT, see LICENSE file
 
-#Origin
+# Origin
 
 Published on 01/Mar/2014.
 
-This library was initially developed by Marcos Ortega from the document "SWF FILE FORMAT SPECIFICATION" published by Adobe in: http://www.adobe.com
+This library was initially developed by [Marcos Ortega](https://github.com/marcosjom) from the document "SWF FILE FORMAT SPECIFICATION" published by Adobe in: http://www.adobe.com
 
 
-#Use
-
+# Use
 
 This library was developed with the aim of extracting data from SWF files.
 
 Ixaya-swf does not yet extract all objects within a SWF. The current version extracts shapes (vector graphics), binary assets (jpeg images and others), sounds (mp3s and PCM), lossless (PNG bitmaps), and movie clips.
 
-
-#Code Features
+# Code Features
 
 Ixaya-swf was conceived and developed prioritising the ease of integration into other projects, characterised by:
 
@@ -43,13 +41,11 @@ Thanks to its current structure, Ixaya-swf can be integrated into most native co
 - etc..
 
 
-#ZLIB Dependency
-
+# ZLIB Dependency
 
 Ixaya-swf depends on a function that performs content decompression in ZLIB format. The project where Ixaya-swf is to be integrated must provide a callback to decompress ZLIB. See demos and invocations to the "ixaSwfLoadFile" method.
 
-#Example Code
-
+# Example Code
 
 ```c
 #include "ixaya-swf.h"
@@ -73,3 +69,9 @@ int main(...){
 }
 
 ```
+
+# Contact
+
+Visit [mortegam.com](https://mortegam.com) for more information and visual examples of projects built with this libray.
+
+May you be surrounded by passionate and curious people. :-)
